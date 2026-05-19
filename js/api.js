@@ -1,6 +1,6 @@
 // Modifier BASE_URL selon votre configuration ORDS.
 // Exemple : http://localhost:8080/ords/clinique
-const BASE_URL = 'http://localhost:8080/ords/clinique';
+const BASE_URL = 'http://localhost:8080/ords/commande';
 
 async function handleResponse(response) {
   if (!response.ok) {
