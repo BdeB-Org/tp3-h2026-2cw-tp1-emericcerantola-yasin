@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clinique Vétérinaire - Animaux</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div>
+      <h1>Liste des animaux</h1>
+      <p class="subtitle">Consultation et filtrage</p>
+    </div>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="proprietaires.html">Propriétaires</a>
+      <a href="animaux.html" class="active">Animaux</a>
+      <a href="veterinaires.html">Vétérinaires</a>
+      <a href="consultations.html">Consultations</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div class="toolbar stack-mobile">
+        <h2>Liste des animaux</h2>
+        <div class="inline-controls">
+          <input type="search" id="search-animaux" placeholder="Rechercher par nom ou espèce..." />
+          <button id="reload-animaux">Actualiser</button>
+        </div>
+      </div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nom</th>
+              <th>Espèce</th>
+              <th>Race</th>
+              <th>Date de naissance</th>
+              <th>ID Propriétaire</th>
+            </tr>
+          </thead>
+          <tbody id="animaux-body">
+            <tr><td colspan="6">Chargement...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/shared.js"></script>
+  <script src="js/animaux.js"></script>
+</body>
+</html>
