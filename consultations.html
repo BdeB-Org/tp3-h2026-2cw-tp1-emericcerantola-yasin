@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clinique Vétérinaire - Consultations</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div>
+      <h1>Gestion des consultations</h1>
+      <p class="subtitle">Consultation des dossiers médicaux et traitements</p>
+    </div>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="proprietaires.html">Propriétaires</a>
+      <a href="animaux.html">Animaux</a>
+      <a href="veterinaires.html">Vétérinaires</a>
+      <a href="consultations.html" class="active">Consultations</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div class="toolbar stack-mobile">
+        <h2>Liste des consultations</h2>
+        <div class="inline-controls">
+          <input type="number" id="filtre-consultation-id" min="1" placeholder="ID de la consultation" />
+          <button id="reload-consultations">Actualiser</button>
+        </div>
+      </div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Date</th>
+              <th>Motif</th>
+              <th>Diagnostic</th>
+              <th>ID Animal</th>
+              <th>Traitements</th>
+            </tr>
+          </thead>
+          <tbody id="consultations-body">
+            <tr><td colspan="6">Chargement...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Traitements de la consultation sélectionnée</h2>
+      <p id="traitements-title">Sélectionnez une consultation pour voir ses traitements.</p>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>ID Traitement</th>
+              <th>Nom</th>
+              <th>Description</th>
+              <th>Dose</th>
+            </tr>
+          </thead>
+          <tbody id="traitements-body">
+            <tr><td colspan="4">Aucune consultation sélectionnée.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/shared.js"></script>
+  <script src="js/consultations.js"></script>
+</body>
+</html>
