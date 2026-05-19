@@ -15,7 +15,7 @@ function afficherAnimaux(animaux) {
       <td>${escapeHtml(a.nom)}</td>
       <td>${escapeHtml(a.espece)}</td>
       <td>${escapeHtml(a.race)}</td>
-      <td>${escapeHtml(a.date_naissance)}</td>
+      <td>${escapeHtml(a.date_naissance ? a.date_naissance.substring(0, 10) : '—')}</td>
       <td>${escapeHtml(a.id_proprietaire)}</td>
     </tr>
   `).join('');
