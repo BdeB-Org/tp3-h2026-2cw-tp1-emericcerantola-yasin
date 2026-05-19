@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clinique Vétérinaire - Vétérinaires</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div>
+      <h1>Gestion des vétérinaires</h1>
+      <p class="subtitle">Consultation, ajout et suppression</p>
+    </div>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="proprietaires.html">Propriétaires</a>
+      <a href="animaux.html">Animaux</a>
+      <a href="veterinaires.html" class="active">Vétérinaires</a>
+      <a href="consultations.html">Consultations</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Ajouter un vétérinaire</h2>
+      <form id="veterinaire-form" class="form-grid">
+        <input type="text" id="nom_vet" placeholder="Nom du vétérinaire" required />
+        <input type="text" id="specialite" placeholder="Spécialité" />
+        <button type="submit">Ajouter</button>
+      </form>
+      <p id="veterinaire-message" class="message"></p>
+    </section>
+
+    <section class="card">
+      <div class="toolbar">
+        <h2>Liste des vétérinaires</h2>
+        <button id="reload-veterinaires">Actualiser</button>
+      </div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nom</th>
+              <th>Spécialité</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="veterinaires-body">
+            <tr><td colspan="4">Chargement...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/shared.js"></script>
+  <script src="js/veterinaires.js"></script>
+</body>
+</html>
