@@ -14,7 +14,7 @@ function afficherConsultations(consultations) {
   consultationsBody.innerHTML = consultations.map(c => `
     <tr>
       <td>${escapeHtml(c.id_consultation)}</td>
-      <td>${escapeHtml(c.date_consultation)}</td>
+      <td>${escapeHtml(c.date_consultation ? c.date_consultation.substring(0, 10) : '—')}</td>
       <td>${escapeHtml(c.motif)}</td>
       <td>${escapeHtml(c.diagnostic)}</td>
       <td>${escapeHtml(c.id_animal)}</td>
