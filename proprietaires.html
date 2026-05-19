@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clinique Vétérinaire - Propriétaires</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div>
+      <h1>Gestion des propriétaires</h1>
+      <p class="subtitle">Consultation, ajout et suppression</p>
+    </div>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="proprietaires.html" class="active">Propriétaires</a>
+      <a href="animaux.html">Animaux</a>
+      <a href="veterinaires.html">Vétérinaires</a>
+      <a href="consultations.html">Consultations</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Ajouter un propriétaire</h2>
+      <form id="proprietaire-form" class="form-grid">
+        <input type="text" id="nom" placeholder="Nom complet" required />
+        <input type="email" id="courriel" placeholder="Courriel" required />
+        <input type="text" id="telephone" placeholder="Téléphone" />
+        <button type="submit">Ajouter</button>
+      </form>
+      <p id="proprietaire-message" class="message"></p>
+    </section>
+
+    <section class="card">
+      <div class="toolbar">
+        <h2>Liste des propriétaires</h2>
+        <button id="reload-proprietaires">Actualiser</button>
+      </div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nom</th>
+              <th>Courriel</th>
+              <th>Téléphone</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="proprietaires-body">
+            <tr><td colspan="5">Chargement...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/shared.js"></script>
+  <script src="js/proprietaires.js"></script>
+</body>
+</html>
