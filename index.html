@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clinique Vétérinaire - Accueil</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div>
+      <h1>Clinique Vétérinaire</h1>
+      <p class="subtitle">Application Web dynamique connectée à une API Oracle ORDS</p>
+    </div>
+    <nav>
+      <a href="index.html" class="active">Accueil</a>
+      <a href="proprietaires.html">Propriétaires</a>
+      <a href="animaux.html">Animaux</a>
+      <a href="veterinaires.html">Vétérinaires</a>
+      <a href="consultations.html">Consultations</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero card">
+      <h2>Bienvenue</h2>
+      <p>
+        Ce projet permet de gérer les dossiers médicaux d'une clinique vétérinaire.
+        Il consomme une API REST Oracle ORDS à partir du navigateur avec <code>fetch()</code>.
+      </p>
+      <div class="grid-2">
+        <div>
+          <h3>Fonctionnalités incluses</h3>
+          <ul>
+            <li>Consultation et gestion des propriétaires</li>
+            <li>Consultation des animaux</li>
+            <li>Consultation et gestion des vétérinaires</li>
+            <li>Consultation des consultations et leurs traitements</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Avant de démarrer</h3>
+          <ol>
+            <li>Créer la base Oracle avec le script SQL fourni</li>
+            <li>Activer ORDS sur le schéma et les tables</li>
+            <li>Vérifier les endpoints dans le navigateur</li>
+            <li>Ouvrir le dossier dans VS Code</li>
+            <li>Lancer avec Live Server</li>
+          </ol>
+        </div>
+      </div>
+      <div class="banner info">
+        <strong>Important :</strong> l'URL de base ORDS se modifie dans <code>js/api.js</code> à la constante <code>BASE_URL</code>.
+      </div>
+    </section>
+
+    <section class="grid-2">
+      <article class="card">
+        <h3>Pages du projet</h3>
+        <ul>
+          <li><strong>proprietaires.html</strong> : liste, ajout, suppression</li>
+          <li><strong>animaux.html</strong> : liste et recherche</li>
+          <li><strong>veterinaires.html</strong> : liste, ajout, suppression</li>
+          <li><strong>consultations.html</strong> : liste des consultations et traitements associés</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Architecture</h3>
+        <p><strong>Frontend</strong> : HTML, CSS, JavaScript</p>
+        <p><strong>API</strong> : Oracle ORDS</p>
+        <p><strong>Base de données</strong> : schéma <code>clinique</code></p>
+        <p><strong>Exécution</strong> : VS Code + Live Server</p>
+      </article>
+    </section>
+  </main>
+
+  <script src="js/shared.js"></script>
+</body>
+</html>
